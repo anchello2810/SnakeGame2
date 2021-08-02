@@ -17,8 +17,9 @@ class SNAKEGAME2_API AFood : public AActor, public IInteractable
 public:	
 	// Sets default values for this actor's properties
 	AFood();
-	/*UPROPERTY(EditDefaultsOnly)
-		TSubclassOf<AFood> FoodElement;*/
+
+	UPROPERTY(EditDefaultsOnly)
+		TSubclassOf<AFood> FoodElementClass;
 
 protected:
 	// Called when the game starts or when spawned
@@ -27,7 +28,8 @@ protected:
 public:	
 	// Called every frame
 
-	//void AddFoodElement();
+	UFUNCTION()
+	void AddFoodElement(int ElementFood=1);
 
 	virtual void Tick(float DeltaTime) override;
 

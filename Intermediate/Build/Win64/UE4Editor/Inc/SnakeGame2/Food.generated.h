@@ -13,8 +13,30 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SNAKEGAME2_Food_generated_h
 
-#define SnakeGame2_Source_SnakeGame2_Food_h_15_RPC_WRAPPERS
-#define SnakeGame2_Source_SnakeGame2_Food_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define SnakeGame2_Source_SnakeGame2_Food_h_15_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execAddFoodElement) \
+	{ \
+		P_GET_PROPERTY(UIntProperty,Z_Param_ElementFood); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->AddFoodElement(Z_Param_ElementFood); \
+		P_NATIVE_END; \
+	}
+
+
+#define SnakeGame2_Source_SnakeGame2_Food_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execAddFoodElement) \
+	{ \
+		P_GET_PROPERTY(UIntProperty,Z_Param_ElementFood); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->AddFoodElement(Z_Param_ElementFood); \
+		P_NATIVE_END; \
+	}
+
+
 #define SnakeGame2_Source_SnakeGame2_Food_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAFood(); \

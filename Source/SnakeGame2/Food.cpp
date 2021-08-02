@@ -4,6 +4,7 @@
 #include "Food.h"
 #include "SnakeBase.h"
 #include "Math/UnrealMathUtility.h"
+#include "Engine/World.h"
 
 // Sets default values
 AFood::AFood()
@@ -19,24 +20,26 @@ void AFood::BeginPlay()
 	Super::BeginPlay();	
 	
 }
-// Called every frame
-void AFood::Tick(float DeltaTime)
+void AFood::AddFoodElement(int ElementFood)
 {
-	Super::Tick(DeltaTime);
-	//AddFoodElement();
-}
-/*void AFood::AddFoodElement()
-{
+
 	float MinY = -750; float MaxY = 830;
 	float MinX = -330; float MaxX = 330;
 	float SpawnX = FMath::FRandRange(MinX, MaxX);
 	float SpawnY = FMath::FRandRange(MinY, MaxY);
 
+	
 		FVector StartPoint = FVector(SpawnX, SpawnY, 0);
 		FTransform NewTransform(StartPoint);
-		GetWorld()->SpawnActor<AFood>(FoodElement, StartPoint);
+		GetWorld()->SpawnActor<AFood>(FoodElementClass, StartPoint);
+}
+// Called every frame
+void AFood::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+	AddFoodElement();
 	
-}*/
+}
 
 void AFood::Interact(AActor* Interactor, bool bIsHead)
 {

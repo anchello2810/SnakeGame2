@@ -4,6 +4,8 @@
 #include "SnakeBase.h"
 #include "SnakeElementBase.h"
 #include "Interactable.h"
+#include "Engine/World.h"
+
 
 // Sets default values
 ASnakeBase::ASnakeBase()
