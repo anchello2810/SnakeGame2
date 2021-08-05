@@ -19,7 +19,6 @@ void EmptyLinkFunctionForGeneratedCodeFood() {}
 	UPackage* Z_Construct_UPackage__Script_SnakeGame2();
 	SNAKEGAME2_API UFunction* Z_Construct_UFunction_AFood_AddFoodElement();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
-	SNAKEGAME2_API UClass* Z_Construct_UClass_AFoodElement_NoRegister();
 	SNAKEGAME2_API UClass* Z_Construct_UClass_UInteractable_NoRegister();
 // End Cross Module References
 	void AFood::StaticRegisterNativesAFood()
@@ -32,20 +31,10 @@ void EmptyLinkFunctionForGeneratedCodeFood() {}
 	}
 	struct Z_Construct_UFunction_AFood_AddFoodElement_Statics
 	{
-		struct Food_eventAddFoodElement_Parms
-		{
-			int32 ElementFood;
-		};
-		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_ElementFood;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UFunction_AFood_AddFoodElement_Statics::NewProp_ElementFood = { "ElementFood", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Food_eventAddFoodElement_Parms, ElementFood), METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AFood_AddFoodElement_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AFood_AddFoodElement_Statics::NewProp_ElementFood,
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AFood_AddFoodElement_Statics::Function_MetaDataParams[] = {
@@ -53,7 +42,7 @@ void EmptyLinkFunctionForGeneratedCodeFood() {}
 		{ "ToolTip", "Called every frame" },
 	};
 #endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFood_AddFoodElement_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFood, nullptr, "AddFoodElement", sizeof(Food_eventAddFoodElement_Parms), Z_Construct_UFunction_AFood_AddFoodElement_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_AFood_AddFoodElement_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFood_AddFoodElement_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AFood_AddFoodElement_Statics::Function_MetaDataParams)) };
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AFood_AddFoodElement_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AFood, nullptr, "AddFoodElement", 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AFood_AddFoodElement_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AFood_AddFoodElement_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_AFood_AddFoodElement()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -75,9 +64,9 @@ void EmptyLinkFunctionForGeneratedCodeFood() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FoodElementClass_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FoodClass_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FClassPropertyParams NewProp_FoodElementClass;
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_FoodClass;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
@@ -88,7 +77,7 @@ void EmptyLinkFunctionForGeneratedCodeFood() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_SnakeGame2,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AFood_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AFood_AddFoodElement, "AddFoodElement" }, // 3799692839
+		{ &Z_Construct_UFunction_AFood_AddFoodElement, "AddFoodElement" }, // 3196911432
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFood_Statics::Class_MetaDataParams[] = {
@@ -97,14 +86,14 @@ void EmptyLinkFunctionForGeneratedCodeFood() {}
 	};
 #endif
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFood_Statics::NewProp_FoodElementClass_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFood_Statics::NewProp_FoodClass_MetaData[] = {
 		{ "Category", "Food" },
 		{ "ModuleRelativePath", "Food.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AFood_Statics::NewProp_FoodElementClass = { "FoodElementClass", nullptr, (EPropertyFlags)0x0014000000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFood, FoodElementClass), Z_Construct_UClass_AFoodElement_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AFood_Statics::NewProp_FoodElementClass_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFood_Statics::NewProp_FoodElementClass_MetaData)) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AFood_Statics::NewProp_FoodClass = { "FoodClass", nullptr, (EPropertyFlags)0x0014000000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFood, FoodClass), Z_Construct_UClass_AFood_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AFood_Statics::NewProp_FoodClass_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFood_Statics::NewProp_FoodClass_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AFood_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFood_Statics::NewProp_FoodElementClass,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFood_Statics::NewProp_FoodClass,
 	};
 		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AFood_Statics::InterfaceParams[] = {
 			{ Z_Construct_UClass_UInteractable_NoRegister, (int32)VTABLE_OFFSET(AFood, IInteractable), false },
@@ -136,7 +125,7 @@ void EmptyLinkFunctionForGeneratedCodeFood() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFood, 8568293);
+	IMPLEMENT_CLASS(AFood, 550957862);
 	template<> SNAKEGAME2_API UClass* StaticClass<AFood>()
 	{
 		return AFood::StaticClass();

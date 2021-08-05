@@ -8,6 +8,7 @@
 #include "Food.generated.h"
 
 
+
 UCLASS()
 
 class SNAKEGAME2_API AFood : public AActor, public IInteractable
@@ -19,7 +20,7 @@ public:
 	AFood();
 
 	UPROPERTY(EditDefaultsOnly)
-		TSubclassOf<AFood> FoodElementClass;
+		TSubclassOf<AFood> FoodClass;
 
 protected:
 	// Called when the game starts or when spawned
@@ -28,11 +29,10 @@ protected:
 public:	
 	// Called every frame
 
-	UFUNCTION()
-	void AddFoodElement(int ElementFood=1);
+	UFUNCTION(BlueprintCallable)
+		void AddFoodElement();
 
 	virtual void Tick(float DeltaTime) override;
 
 	virtual void Interact (AActor* Interactor, bool bIsHead) override;
-
 };

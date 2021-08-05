@@ -58,6 +58,9 @@
     <ClInclude Include="..\..\Source\SnakeGame2\Food.h">
       <Filter>Source\SnakeGame2</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\SnakeGame2\DethActor.h">
+      <Filter>Source\SnakeGame2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\SnakeGame2\PlayerPawnBase.cpp">
@@ -73,6 +76,9 @@
       <Filter>Source\SnakeGame2</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\SnakeGame2\Food.cpp">
+      <Filter>Source\SnakeGame2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SnakeGame2\DethActor.cpp">
       <Filter>Source\SnakeGame2</Filter>
     </ClCompile>
   </ItemGroup>

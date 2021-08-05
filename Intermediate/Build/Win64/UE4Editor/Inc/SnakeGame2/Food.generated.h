@@ -13,31 +13,29 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define SNAKEGAME2_Food_generated_h
 
-#define SnakeGame2_Source_SnakeGame2_Food_h_15_RPC_WRAPPERS \
+#define SnakeGame2_Source_SnakeGame2_Food_h_16_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execAddFoodElement) \
 	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_ElementFood); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->AddFoodElement(Z_Param_ElementFood); \
+		P_THIS->AddFoodElement(); \
 		P_NATIVE_END; \
 	}
 
 
-#define SnakeGame2_Source_SnakeGame2_Food_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+#define SnakeGame2_Source_SnakeGame2_Food_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execAddFoodElement) \
 	{ \
-		P_GET_PROPERTY(UIntProperty,Z_Param_ElementFood); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		P_THIS->AddFoodElement(Z_Param_ElementFood); \
+		P_THIS->AddFoodElement(); \
 		P_NATIVE_END; \
 	}
 
 
-#define SnakeGame2_Source_SnakeGame2_Food_h_15_INCLASS_NO_PURE_DECLS \
+#define SnakeGame2_Source_SnakeGame2_Food_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAFood(); \
 	friend struct Z_Construct_UClass_AFood_Statics; \
@@ -47,7 +45,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<AFood*>(this); }
 
 
-#define SnakeGame2_Source_SnakeGame2_Food_h_15_INCLASS \
+#define SnakeGame2_Source_SnakeGame2_Food_h_16_INCLASS \
 private: \
 	static void StaticRegisterNativesAFood(); \
 	friend struct Z_Construct_UClass_AFood_Statics; \
@@ -57,7 +55,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<AFood*>(this); }
 
 
-#define SnakeGame2_Source_SnakeGame2_Food_h_15_STANDARD_CONSTRUCTORS \
+#define SnakeGame2_Source_SnakeGame2_Food_h_16_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AFood(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AFood) \
@@ -70,7 +68,7 @@ private: \
 public:
 
 
-#define SnakeGame2_Source_SnakeGame2_Food_h_15_ENHANCED_CONSTRUCTORS \
+#define SnakeGame2_Source_SnakeGame2_Food_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AFood(AFood&&); \
@@ -81,26 +79,26 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AFood); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AFood)
 
 
-#define SnakeGame2_Source_SnakeGame2_Food_h_15_PRIVATE_PROPERTY_OFFSET
-#define SnakeGame2_Source_SnakeGame2_Food_h_11_PROLOG
-#define SnakeGame2_Source_SnakeGame2_Food_h_15_GENERATED_BODY_LEGACY \
+#define SnakeGame2_Source_SnakeGame2_Food_h_16_PRIVATE_PROPERTY_OFFSET
+#define SnakeGame2_Source_SnakeGame2_Food_h_12_PROLOG
+#define SnakeGame2_Source_SnakeGame2_Food_h_16_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SnakeGame2_Source_SnakeGame2_Food_h_15_PRIVATE_PROPERTY_OFFSET \
-	SnakeGame2_Source_SnakeGame2_Food_h_15_RPC_WRAPPERS \
-	SnakeGame2_Source_SnakeGame2_Food_h_15_INCLASS \
-	SnakeGame2_Source_SnakeGame2_Food_h_15_STANDARD_CONSTRUCTORS \
+	SnakeGame2_Source_SnakeGame2_Food_h_16_PRIVATE_PROPERTY_OFFSET \
+	SnakeGame2_Source_SnakeGame2_Food_h_16_RPC_WRAPPERS \
+	SnakeGame2_Source_SnakeGame2_Food_h_16_INCLASS \
+	SnakeGame2_Source_SnakeGame2_Food_h_16_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define SnakeGame2_Source_SnakeGame2_Food_h_15_GENERATED_BODY \
+#define SnakeGame2_Source_SnakeGame2_Food_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	SnakeGame2_Source_SnakeGame2_Food_h_15_PRIVATE_PROPERTY_OFFSET \
-	SnakeGame2_Source_SnakeGame2_Food_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	SnakeGame2_Source_SnakeGame2_Food_h_15_INCLASS_NO_PURE_DECLS \
-	SnakeGame2_Source_SnakeGame2_Food_h_15_ENHANCED_CONSTRUCTORS \
+	SnakeGame2_Source_SnakeGame2_Food_h_16_PRIVATE_PROPERTY_OFFSET \
+	SnakeGame2_Source_SnakeGame2_Food_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	SnakeGame2_Source_SnakeGame2_Food_h_16_INCLASS_NO_PURE_DECLS \
+	SnakeGame2_Source_SnakeGame2_Food_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

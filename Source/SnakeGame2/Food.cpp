@@ -18,28 +18,33 @@ AFood::AFood()
 void AFood::BeginPlay()
 {
 	Super::BeginPlay();	
-	
 }
-void AFood::AddFoodElement(int ElementFood)
-{
 
-	float MinY = -750; float MaxY = 830;
-	float MinX = -330; float MaxX = 330;
+
+void AFood::AddFoodElement()
+{
+	float MinY = -700; float MaxY = 780;
+	float MinX = -270; float MaxX = 270;
 	float SpawnX = FMath::FRandRange(MinX, MaxX);
 	float SpawnY = FMath::FRandRange(MinY, MaxY);
 
+	FVector StartPoint = FVector(SpawnX, SpawnY, 0);
+	FRotator StartRot = FRotator(0, 0, 0);
+	FTransform NewTransform(StartPoint);
+
+	//World->SpawnActor(AActor::StaticClass(), &StartPoint, &StartRot, SpawnParametres);
+
+	AFood* FoodEl;
+	FoodEl = GetWorld()->SpawnActor<AFood>(FoodClass, NewTransform);
 	
-		FVector StartPoint = FVector(SpawnX, SpawnY, 0);
-		FTransform NewTransform(StartPoint);
-		GetWorld()->SpawnActor<AFood>(FoodElementClass, StartPoint);
 }
-// Called every frame
 void AFood::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	AddFoodElement();
 	
 }
+
+// Called every frame
 
 void AFood::Interact(AActor* Interactor, bool bIsHead)
 {
@@ -48,13 +53,10 @@ void AFood::Interact(AActor* Interactor, bool bIsHead)
 		auto Snake = Cast<ASnakeBase>(Interactor);
 		if (IsValid(Snake))
 		{
+
 			Snake->AddSnakeElement();
 			Destroy();
+			AddFoodElement();
 		}
 	}
 }
-
-
-
-
-
