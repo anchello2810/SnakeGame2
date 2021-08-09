@@ -59,7 +59,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ADethActor); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ADethActor)
 
 
-#define SnakeGame2_Source_SnakeGame2_DethActor_h_13_PRIVATE_PROPERTY_OFFSET
+#define SnakeGame2_Source_SnakeGame2_DethActor_h_13_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__ADethClass() { return STRUCT_OFFSET(ADethActor, ADethClass); }
+
+
 #define SnakeGame2_Source_SnakeGame2_DethActor_h_10_PROLOG
 #define SnakeGame2_Source_SnakeGame2_DethActor_h_13_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

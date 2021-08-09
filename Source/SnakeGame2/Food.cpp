@@ -6,6 +6,7 @@
 #include "Math/UnrealMathUtility.h"
 #include "Engine/World.h"
 
+
 // Sets default values
 AFood::AFood()
 {
@@ -23,19 +24,25 @@ void AFood::BeginPlay()
 
 void AFood::AddFoodElement()
 {
-	float MinY = -700; float MaxY = 780;
-	float MinX = -270; float MaxX = 270;
+	float MinY = -600; float MaxY = 740;
+	float MinX = -240; float MaxX = 250;
 	float SpawnX = FMath::FRandRange(MinX, MaxX);
 	float SpawnY = FMath::FRandRange(MinY, MaxY);
 
 	FVector StartPoint = FVector(SpawnX, SpawnY, 0);
 	FRotator StartRot = FRotator(0, 0, 0);
 	FTransform NewTransform(StartPoint);
-
-	//World->SpawnActor(AActor::StaticClass(), &StartPoint, &StartRot, SpawnParametres);
-
+	
 	AFood* FoodEl;
 	FoodEl = GetWorld()->SpawnActor<AFood>(FoodClass, NewTransform);
+	TArray<AActor*> FoundActors;
+	GetOverlappingActors(FoundActors);
+	for (int32 i = 0; i < FoundActors.Num(); ++i)
+	{
+		FVector Startpoint = FVector(SpawnX + 25, SpawnY + 25, 0);
+		FTransform Transform2(Startpoint);
+		GetWorld()->SpawnActor<AFood>(FoodClass, Transform2);
+	}
 	
 }
 void AFood::Tick(float DeltaTime)
@@ -60,3 +67,5 @@ void AFood::Interact(AActor* Interactor, bool bIsHead)
 		}
 	}
 }
+
+

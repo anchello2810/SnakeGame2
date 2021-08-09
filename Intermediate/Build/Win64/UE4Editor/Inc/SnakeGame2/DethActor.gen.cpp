@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeDethActor() {}
 	SNAKEGAME2_API UClass* Z_Construct_UClass_ADethActor();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_SnakeGame2();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	SNAKEGAME2_API UClass* Z_Construct_UClass_UInteractable_NoRegister();
 // End Cross Module References
 	void ADethActor::StaticRegisterNativesADethActor()
@@ -32,6 +33,11 @@ void EmptyLinkFunctionForGeneratedCodeDethActor() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ADethClass_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_ADethClass;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -46,6 +52,16 @@ void EmptyLinkFunctionForGeneratedCodeDethActor() {}
 		{ "ModuleRelativePath", "DethActor.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ADethActor_Statics::NewProp_ADethClass_MetaData[] = {
+		{ "Category", "DethActor" },
+		{ "ModuleRelativePath", "DethActor.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_ADethActor_Statics::NewProp_ADethClass = { "ADethClass", nullptr, (EPropertyFlags)0x0044000000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ADethActor, ADethClass), Z_Construct_UClass_ADethActor_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_ADethActor_Statics::NewProp_ADethClass_MetaData, ARRAY_COUNT(Z_Construct_UClass_ADethActor_Statics::NewProp_ADethClass_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ADethActor_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADethActor_Statics::NewProp_ADethClass,
+	};
 		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ADethActor_Statics::InterfaceParams[] = {
 			{ Z_Construct_UClass_UInteractable_NoRegister, (int32)VTABLE_OFFSET(ADethActor, IInteractable), false },
 		};
@@ -58,11 +74,11 @@ void EmptyLinkFunctionForGeneratedCodeDethActor() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_ADethActor_Statics::PropPointers,
 		InterfaceParams,
 		ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		ARRAY_COUNT(Z_Construct_UClass_ADethActor_Statics::PropPointers),
 		ARRAY_COUNT(InterfaceParams),
 		0x009000A0u,
 		METADATA_PARAMS(Z_Construct_UClass_ADethActor_Statics::Class_MetaDataParams, ARRAY_COUNT(Z_Construct_UClass_ADethActor_Statics::Class_MetaDataParams))
@@ -76,7 +92,7 @@ void EmptyLinkFunctionForGeneratedCodeDethActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ADethActor, 3324056421);
+	IMPLEMENT_CLASS(ADethActor, 2572242103);
 	template<> SNAKEGAME2_API UClass* StaticClass<ADethActor>()
 	{
 		return ADethActor::StaticClass();

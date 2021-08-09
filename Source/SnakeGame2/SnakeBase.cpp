@@ -5,6 +5,7 @@
 #include "SnakeElementBase.h"
 #include "Interactable.h"
 #include "Engine/World.h"
+#include "Kismet/GameplayStatics.h"
 
 
 // Sets default values
@@ -15,6 +16,7 @@ ASnakeBase::ASnakeBase()
 	ElementSize = 100.f;
 	MovementSpeed = 10.f;
 	LastMoveDirection = EMovementDirection::DOWN;
+	
 }
 
 // Called when the game starts or when spawned
@@ -45,11 +47,12 @@ void ASnakeBase::AddSnakeElement(int ElementsNum)
 		{
 			NewSnakeElem->SetFirstElementType();
 		}
-	}
+	}	
 }
 
 void ASnakeBase::Move()
 {
+
 	FVector MovementVector(ForceInitToZero);
 	float  MovementSpeed = ElementSize;
 

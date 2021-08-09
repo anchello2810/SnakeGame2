@@ -9,6 +9,7 @@
 
 
 
+
 UCLASS()
 
 class SNAKEGAME2_API AFood : public AActor, public IInteractable
@@ -35,4 +36,6 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	virtual void Interact (AActor* Interactor, bool bIsHead) override;
+
+
 };

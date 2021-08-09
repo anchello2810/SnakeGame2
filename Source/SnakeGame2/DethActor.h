@@ -11,7 +11,8 @@ UCLASS()
 class SNAKEGAME2_API ADethActor : public AActor, public IInteractable
 {
 	GENERATED_BODY()
-	
+		UPROPERTY(EditDefaultsOnly)
+		TSubclassOf<ADethActor> ADethClass;
 public:	
 	// Sets default values for this actor's properties
 	ADethActor();
@@ -24,8 +25,9 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	void CollideActor();
+	//void CollideActor();
 
-	//virtual void Interact(AActor* Interactor, bool bIsHead) override;
+	virtual void Interact(AActor* Interactor, bool bIsHead) override;
+
 
 };

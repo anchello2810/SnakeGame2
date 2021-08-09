@@ -3,6 +3,7 @@
 
 #include "DethActor.h"
 #include "SnakeBase.h"
+#include "Engine/World.h"
 
 // Sets default values
 ADethActor::ADethActor()
@@ -22,10 +23,10 @@ void ADethActor::BeginPlay()
 void ADethActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	CollideActor();
+	//CollideActor();
 }
 
-void ADethActor::CollideActor()
+/*void ADethActor::CollideActor()
 {
 	TArray<AActor*> CollectedActors;
 	GetOverlappingActors(CollectedActors);
@@ -33,9 +34,9 @@ void ADethActor::CollideActor()
 	{
 		CollectedActors[i]->Destroy(true, true);
 	}
-}
+}*/
 
-/*void ADethActor::Interact(AActor* Interactor, bool bIsHead)
+void ADethActor::Interact(AActor* Interactor, bool bIsHead)
 {
 	auto Snake = Cast<ASnakeBase>(Interactor);
 		if (IsValid(Snake))
@@ -43,4 +44,6 @@ void ADethActor::CollideActor()
 			Snake->Destroy(true, true);
 		}
 	
-}*/
+}
+
+
